@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 
@@ -9,7 +10,8 @@ pygame.display.set_caption("Pong")
 run = True
 score_left = 0
 score_right = 0
- 
+direction = [0, 1]
+angle = [0, 1, 2]
 
 # colors
 BLUE = (0, 0, 255)
