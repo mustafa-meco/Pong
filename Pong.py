@@ -88,7 +88,15 @@ while run:
         score += 1
     if ball_x >= WIDTH:
         score -= 1
-        
+
+    # score display
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render(f'Score: {score}', True, BLUE, BLACK)
+    textRect = text.get_rect()
+    textRect.center = (WIDTH//2, 50)
+    wn.blit(text, textRect)
+    
+            
         
 
     # movements
