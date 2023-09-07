@@ -7,6 +7,7 @@ WIDTH, HEIGHT = 1000, 600
 wn = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong")
 run = True
+score = 0
 
 # colors
 BLUE = (0, 0, 255)
