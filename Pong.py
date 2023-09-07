@@ -7,7 +7,9 @@ WIDTH, HEIGHT = 1000, 600
 wn = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong")
 run = True
-score = 0
+score_left = 0
+score_right = 0
+ 
 
 # colors
 BLUE = (0, 0, 255)
@@ -54,12 +56,12 @@ while run:
         ball_x, ball_y = WIDTH//2 - radius, HEIGHT//2 - radius
         ball_vel_x *= -1
         ball_vel_y *= -1
-        score += 1
+        score_left += 1
     if ball_x <= 0 + radius:
         ball_x, ball_y = WIDTH//2 - radius, HEIGHT//2 - radius
         ball_vel_x *= -1
         ball_vel_y *= -1
-        score -= 1
+        score_right += 1
 
     # paddle's movement controls
     if right_paddle_y <= 0:
@@ -85,12 +87,13 @@ while run:
             ball_x = right_paddle_x - radius 
             ball_vel_x *= -1
 
-    # score display
+    # scores display
     font = pygame.font.Font('freesansbold.ttf', 32)
-    text = font.render(f'Score: {score}', True, BLUE, BLACK)
+    text = font.render(f'{score_left} : {score_right}', True, RED, BLACK)
     textRect = text.get_rect()
     textRect.center = (WIDTH//2, 50)
     wn.blit(text, textRect)
+
 
 
         
