@@ -56,13 +56,47 @@ while run:
         ball_vel_y *= -1
     if ball_x >= WIDTH - radius:
         ball_x, ball_y = WIDTH//2 - radius, HEIGHT//2 - radius
+        dir = random.choice(direction)
+        ang = random.choice(angle)
+        if dir == 0:
+            if ang == 0:
+                ball_vel_x, ball_vel_y = 0.7, -1.4
+            elif ang == 1:
+                ball_vel_x, ball_vel_y = 0.7, -0.7
+            elif ang == 2:
+                ball_vel_x, ball_vel_y = 1.4, -0.7
+        elif dir == 1:
+            if ang == 0:
+                ball_vel_x, ball_vel_y = 0.7, 1.4
+            elif ang == 1:
+                ball_vel_x, ball_vel_y = 0.7, 0.7
+            elif ang == 2:
+                ball_vel_x, ball_vel_y = 1.4, 0.7
+
         ball_vel_x *= -1
-        ball_vel_y *= -1
+        
         score_left += 1
+
     if ball_x <= 0 + radius:
         ball_x, ball_y = WIDTH//2 - radius, HEIGHT//2 - radius
-        ball_vel_x *= -1
-        ball_vel_y *= -1
+
+        dir = random.choice(direction)
+        ang = random.choice(angle)
+        if dir == 0:
+            if ang == 0:
+                ball_vel_x, ball_vel_y = 0.7, -1.4
+            elif ang == 1:
+                ball_vel_x, ball_vel_y = 0.7, -0.7
+            elif ang == 2:
+                ball_vel_x, ball_vel_y = 1.4, -0.7
+        elif dir == 1:
+            if ang == 0:
+                ball_vel_x, ball_vel_y = 0.7, 1.4
+            elif ang == 1:
+                ball_vel_x, ball_vel_y = 0.7, 0.7
+            elif ang == 2:
+                ball_vel_x, ball_vel_y = 1.4, 0.7
+
         score_right += 1
 
     # paddle's movement controls
