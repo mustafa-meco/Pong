@@ -82,6 +82,13 @@ while run:
         if right_paddle_y <= ball_y <= right_paddle_y + paddle_height:
             ball_x = right_paddle_x - radius 
             ball_vel_x *= -1
+
+    # score handling
+    if ball_x <= 0:
+        score += 1
+    if ball_x >= WIDTH:
+        score -= 1
+        
         
 
     # movements
