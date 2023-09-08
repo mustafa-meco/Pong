@@ -84,6 +84,8 @@ while run:
         ball_vel_x *= -1
         
         score_left += 1
+        
+        right_gadget = left_gadget = 0
 
     if ball_x <= 0 + radius:
         ball_x, ball_y = WIDTH//2 - radius, HEIGHT//2 - radius
@@ -106,6 +108,9 @@ while run:
                 ball_vel_x, ball_vel_y = 1.4, 0.7
 
         score_right += 1
+
+        right_gadget = left_gadget = 0
+
 
     # paddle's movement controls
     if right_paddle_y <= 0:
@@ -171,9 +176,20 @@ while run:
     textRect.center = (right_paddle_x + paddle_width//2, right_paddle_y + paddle_height + 50)
     wn.blit(text, textRect)
 
+    
 
     # OBJECTS
     pygame.draw.circle(wn, BLUE, (ball_x, ball_y), radius)
     pygame.draw.rect(wn, RED, pygame.Rect(left_paddle_x, left_paddle_y, paddle_width, paddle_height))
     pygame.draw.rect(wn, RED, pygame.Rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height))
+    
+    # show gadgets activated on the paddle color or effect
+    # left
+    if left_gadget == 1:
+        pygame.draw.rect(wn, BLUE, pygame.Rect(left_paddle_x, left_paddle_y, paddle_width, paddle_height))
+    # right
+    if right_gadget == 1:
+        pygame.draw.rect(wn, BLUE, pygame.Rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height))
+        
+
     pygame.display.update()
