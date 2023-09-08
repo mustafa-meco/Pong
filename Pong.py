@@ -29,6 +29,10 @@ left_paddle_y = right_paddle_y = HEIGHT//2 - paddle_height//2
 left_paddle_x, right_paddle_x = 100 - paddle_width//2, WIDTH - 100 - paddle_width//2
 right_paddle_vel = left_paddle_vel = 0
 
+# gadgets
+left_gadget = right_gadget = 0
+left_gadget_remaining = right_gadget_remaining = 5
+
 # main loop
 while run:
     wn.fill(BLACK)
@@ -40,10 +44,16 @@ while run:
                 right_paddle_vel = -0.9
             if event.key == pygame.K_DOWN:
                 right_paddle_vel = 0.9
+            if event.key == pygame.K_RIGHT and right_gadget_remaining > 0:
+                right_gadget = 1
+                right_gadget_remaining -= 1
             if event.key == pygame.K_w:
                 left_paddle_vel = -0.9
             if event.key == pygame.K_s:
                 left_paddle_vel = 0.9
+            if event.key == pygame.K_d and left_gadget_remaining > 0:
+                left_gadget = 1
+                left_gadget_remaining -= 1
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                 right_paddle_vel = 0
@@ -131,7 +141,19 @@ while run:
     wn.blit(text, textRect)
 
 
-
+    # gadgets in action
+    if left_gadget == 1:
+        if left_paddle_x <= ball_x <= left_paddle_x + paddle_width:
+            if left_paddle_y <= ball_y <= left_paddle_y + paddle_height:
+                ball_x = left_paddle_x + paddle_width + radius
+                ball_vel_x *= -3.5
+                left_gadget = 0
+    if right_gadget == 1:
+        if right_paddle_x <= ball_x <= right_paddle_x + paddle_width:
+            if right_paddle_y <= ball_y <= right_paddle_y + paddle_height:
+                ball_x = right_paddle_x - radius 
+                ball_vel_x *= -3.5
+                right_gadget = 0
         
 
     # movements
