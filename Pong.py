@@ -17,6 +17,7 @@ angle = [0, 1, 2]
 BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 BLACK = (0, 0, 0)
+WHITE = (255,255,255)
 
 # for the ball
 radius = 15
@@ -191,5 +192,13 @@ while run:
     if right_gadget == 1:
         pygame.draw.rect(wn, BLUE, pygame.Rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height))
         
+    # show gadgets activated by a white circle on the paddle
+    # left
+    if left_gadget == 1:
+        pygame.draw.circle(wn, WHITE, (left_paddle_x + paddle_width//2, left_paddle_y + paddle_height//2), 10)
+    # right
+    if right_gadget == 1:
+        pygame.draw.circle(wn, WHITE, (right_paddle_x + paddle_width//2, right_paddle_y + paddle_height//2), 10)
+
 
     pygame.display.update()
