@@ -218,3 +218,80 @@ while run:
 
 
     pygame.display.update()
+
+
+# More ideas
+# 1. Add a timer for the gadgets
+# 2. Add a timer for the game
+# 3. Add a pause button
+# 4. Add a start button
+# 5. Add a restart button
+# 6. Add a menu
+# 7. Add a scoreboard
+# 8. Add a sound effect for the ball hitting the paddle
+# 9. Add a sound effect for the ball hitting the wall
+# 10. Add a sound effect for the ball going out of the screen
+# 11. Add a sound effect for the gadget
+# 12. Add a sound effect for the score
+# 13. Add a sound effect for the game over
+# 14. Add a sound effect for the game start
+# 15. Add a sound effect for the game restart
+# 16. Add a sound effect for the game pause
+# 17. Add a sound effect for the game resume
+# 18. Add a sound effect for the game menu
+# 19. Add a sound effect for the game exit
+# 20. Add a sound effect for the game win
+# 21. Add a sound effect for the game lose
+# 22. Add a sound effect for the game draw
+# 23. Add a sound effect for the game tie
+# modularize the code
+# add sound effects
+# add a menu
+# add a pause button
+# add a restart button
+# add a quit button
+# add a settings button
+# add a settings menu
+# add a settings menu button
+# add a settings menu quit button
+# add a settings menu sound button
+# add a settings menu sound on/off button
+# add a settings menu sound quit button
+# add a settings menu music button
+# add a settings menu music on/off button
+# add a settings menu music quit button
+# add a settings menu controls button
+# add a settings menu controls quit button
+# add a settings menu controls left paddle up button
+# add a settings menu controls left paddle down button
+# add a settings menu controls left paddle smash button
+# add a settings menu controls left paddle flash button
+# add a settings menu controls right paddle up button
+# add a settings menu controls right paddle down button
+# add a settings menu controls right paddle smash button
+# add a settings menu controls right paddle flash button
+# add a settings menu controls quit button
+# add a settings menu quit button
+# do all of that in a separate file
+# add a single player mode
+# add a multiplayer mode
+# add a multiplayer mode with a bot
+# add a multiplayer mode with a bot with a difficulty setting
+# add a multiplayer mode with a bot with a difficulty setting with a bot speed setting
+# add a multiplayer mode with a bot with a difficulty setting with a bot speed setting with a bot smash frequency setting
+# add a multiplayer mode with a bot with a difficulty setting with a bot speed setting with a bot smash frequency setting with a bot flash frequency setting
+# add a multiplayer mode with a bot with a difficulty setting with a bot speed setting with a bot smash frequency setting with a bot flash frequency setting with a bot smash speed setting
+# add a multiplayer mode with a bot with a difficulty setting with a bot speed setting with a bot smash frequency setting with a bot flash frequency setting with a bot smash speed setting with a bot flash speed setting
+# host the game on a website
+# make the game online
+# add a chat box
+# add a chat box with a chat history
+# add a chat box with a chat history with a chat history save button
+# add a chat box with a chat history with a chat history save button with a chat history load button
+# add a chat box with a chat history with a chat history save button with a chat history load button with a chat history clear button
+# add a chat box with a chat history with a chat history save button with a chat history load button with a chat history clear button with a chat history quit button
+# add a chat box with a chat history with a chat history save button with a chat history load button with a chat history clear button with a chat history quit button with a chat history send button
+# how to make a game online
+# how to host a game on a website
+# how to make a chat box
+# how to make a chat box with a chat history
