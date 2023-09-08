@@ -133,6 +133,7 @@ while run:
     if left_paddle_x <= ball_x <= left_paddle_x + paddle_width:
         if left_paddle_y <= ball_y <= left_paddle_y + paddle_height:
             ball_x = left_paddle_x + paddle_width + radius
+            # left smash gadget in action
             if left_gadget == 1:
                 ball_vel_x *= -3.5
                 left_gadget_remaining -= 1
@@ -144,6 +145,7 @@ while run:
     if right_paddle_x <= ball_x <= right_paddle_x + paddle_width:
         if right_paddle_y <= ball_y <= right_paddle_y + paddle_height:
             ball_x = right_paddle_x - radius 
+            # right smash gadget in action
             if right_gadget == 1:
                 ball_vel_x *= -3.5
                 right_gadget_remaining -= 1
@@ -167,7 +169,7 @@ while run:
     right_paddle_y += right_paddle_vel
     left_paddle_y += left_paddle_vel
 
-    # flash gadget
+    # flash gadget in action
     if left_gadget == 2:
         left_paddle_y = ball_y - paddle_height//2
         left_gadget = 0
