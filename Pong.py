@@ -162,7 +162,20 @@ while run:
     right_paddle_y += right_paddle_vel
     left_paddle_y += left_paddle_vel
 
-    
+    # show gadgets remaining
+    # left
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render(f'{left_gadget_remaining}', True, RED, BLACK)
+    textRect = text.get_rect()
+    textRect.center = (left_paddle_x + paddle_width//2, left_paddle_y + paddle_height + 50)
+    wn.blit(text, textRect)
+    # right
+    font = pygame.font.Font('freesansbold.ttf', 32)
+    text = font.render(f'{right_gadget_remaining}', True, RED, BLACK)
+    textRect = text.get_rect()
+    textRect.center = (right_paddle_x + paddle_width//2, right_paddle_y + paddle_height + 50)
+    wn.blit(text, textRect)
+        
 
     # OBJECTS
     pygame.draw.circle(wn, BLUE, (ball_x, ball_y), radius)
