@@ -123,9 +123,10 @@ while run:
     if left_paddle_x <= ball_x <= left_paddle_x + paddle_width:
         if left_paddle_y <= ball_y <= left_paddle_y + paddle_height:
             ball_x = left_paddle_x + paddle_width + radius
-            if left_gadget == 1:
+            if left_gadget == 1 and left_gadget_remaining > 0:
                 ball_vel_x *= -3.5
                 left_gadget_remaining -= 1
+                left_gadget = 0
             else:
                 ball_vel_x *= -1
     # right paddle
@@ -133,9 +134,10 @@ while run:
     if right_paddle_x <= ball_x <= right_paddle_x + paddle_width:
         if right_paddle_y <= ball_y <= right_paddle_y + paddle_height:
             ball_x = right_paddle_x - radius 
-            if right_gadget == 1:
+            if right_gadget == 1 and right_gadget_remaining > 0:
                 ball_vel_x *= -3.5
                 right_gadget_remaining -= 1
+                right_gadget = 0
             else:
                 ball_vel_x *= -1
 
@@ -147,21 +149,6 @@ while run:
     wn.blit(text, textRect)
 
 
-    # gadgets in action
-    if left_gadget == 1:
-        if left_paddle_x <= ball_x <= left_paddle_x + paddle_width:
-            if left_paddle_y <= ball_y <= left_paddle_y + paddle_height:
-                ball_x = left_paddle_x + paddle_width + radius
-                ball_vel_x *= -3.5
-                left_gadget = 0
-                left_gadget_remaining -= 1
-    if right_gadget == 1:
-        if right_paddle_x <= ball_x <= right_paddle_x + paddle_width:
-            if right_paddle_y <= ball_y <= right_paddle_y + paddle_height:
-                ball_x = right_paddle_x - radius 
-                ball_vel_x *= -3.5
-                right_gadget = 0
-                right_gadget_remaining -= 1
         
 
     # movements
